@@ -20,9 +20,10 @@ for intent in intents['intents']:
     tags.append(tag)
     for pattern in intent['patterns']:
         w = Tokenizer(pattern)
-        w = [Stemmer.stem(w) for w in all_words if w not in punctuation_pattern]
-        all_words.extend(w)
         xy.append((w,tag))
+        # Filter out non-string elements
+        w = [Stemmer.stem(x) for x in w if x not in punctuation_pattern]
+        all_words.extend(w)
      
-# Filter out non-string elements
-print(all_words)
+# Sort and remove duplicate words
+all_words = sorted(set(all_words))
