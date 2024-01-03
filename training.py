@@ -21,10 +21,5 @@ for intent in intents['intents']:
      
 # Define a regular expression pattern for punctuation
 punctuation_pattern = ["?","!",",","."]
-     
-# Filter out non-string elements
-print(f"{xy} \n\n\n")
-print(f"{tag} \n\n\n")
-print(f"{all_words} \n\n\n")
 all_words = [Stemmer.stem(w) for w in all_words if w not in punctuation_pattern]
-print(all_words)
+all_words = sorted(set(all_words))
