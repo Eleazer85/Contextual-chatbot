@@ -1,5 +1,6 @@
 import json
 import torchtext.data as data
+import Helper
 import nltk
 
 Tokenizer = data.get_tokenizer('basic_english')
@@ -27,3 +28,9 @@ for intent in intents['intents']:
      
 # Sort and remove duplicate words
 all_words = sorted(set(all_words))
+x_train = []
+y_train = []
+
+for sentence , tag in xy:
+    bag = Helper.Bags_of_words(sentence,all_words)
+    print(bag)
