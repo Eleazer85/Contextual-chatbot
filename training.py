@@ -10,16 +10,20 @@ all_words = []
 tags = []
 xy = []
 Stemmer = nltk.stem.PorterStemmer()
+
+# Define a regular expression pattern for punctuation
+punctuation_pattern = ["?","!",",","."]
+
 # loop through each sentence in our intents patterns
 for intent in intents['intents']: 
     tag = intent['tag']
     tags.append(tag)
     for pattern in intent['patterns']:
         w = Tokenizer(pattern)
-        all_words.extend(w)
         xy.append((w,tag))
+        # Filter out non-string elements
+        w = [Stemmer.stem(x) for x in w if x not in punctuation_pattern]
+        all_words.extend(w)
      
-# Define a regular expression pattern for punctuation
-punctuation_pattern = ["?","!",",","."]
-all_words = [Stemmer.stem(w) for w in all_words if w not in punctuation_pattern]
+# Sort and remove duplicate words
 all_words = sorted(set(all_words))
