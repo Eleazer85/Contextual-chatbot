@@ -1,0 +1,195 @@
+2024-01-06 18:23:18,438 INFO    StreamThr :8832 [internal.py:wandb_internal():86] W&B internal server running at pid: 8832, started at: 2024-01-06 18:23:18.437050
+2024-01-06 18:23:18,440 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: status
+2024-01-06 18:23:18,444 INFO    WriterThread:8832 [datastore.py:open_for_write():85] open: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\run-q1aj90eh.wandb
+2024-01-06 18:23:18,445 DEBUG   SenderThread:8832 [sender.py:send():382] send: header
+2024-01-06 18:23:18,495 DEBUG   SenderThread:8832 [sender.py:send():382] send: run
+2024-01-06 18:23:19,484 INFO    SenderThread:8832 [dir_watcher.py:__init__():211] watching files in: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files
+2024-01-06 18:23:19,485 INFO    SenderThread:8832 [sender.py:_start_run_threads():1136] run started: q1aj90eh with start time 1704540198.441044
+2024-01-06 18:23:19,495 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: check_version
+2024-01-06 18:23:19,495 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: check_version
+2024-01-06 18:23:22,659 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: run_start
+2024-01-06 18:23:22,709 DEBUG   HandlerThread:8832 [system_info.py:__init__():32] System info init
+2024-01-06 18:23:22,709 DEBUG   HandlerThread:8832 [system_info.py:__init__():47] System info init done
+2024-01-06 18:23:22,709 INFO    HandlerThread:8832 [system_monitor.py:start():194] Starting system monitor
+2024-01-06 18:23:22,710 INFO    SystemMonitor:8832 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-06 18:23:22,710 INFO    HandlerThread:8832 [system_monitor.py:probe():214] Collecting system info
+2024-01-06 18:23:22,714 INFO    SystemMonitor:8832 [interfaces.py:start():190] Started cpu monitoring
+2024-01-06 18:23:22,714 INFO    SystemMonitor:8832 [interfaces.py:start():190] Started disk monitoring
+2024-01-06 18:23:22,715 INFO    SystemMonitor:8832 [interfaces.py:start():190] Started gpu monitoring
+2024-01-06 18:23:22,722 INFO    SystemMonitor:8832 [interfaces.py:start():190] Started memory monitoring
+2024-01-06 18:23:22,736 INFO    SystemMonitor:8832 [interfaces.py:start():190] Started network monitoring
+2024-01-06 18:23:22,739 DEBUG   HandlerThread:8832 [system_info.py:probe():196] Probing system
+2024-01-06 18:23:22,740 DEBUG   HandlerThread:8832 [system_info.py:_probe_git():181] Probing git
+2024-01-06 18:23:22,744 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:22,744 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:22,829 DEBUG   HandlerThread:8832 [system_info.py:_probe_git():189] Probing git done
+2024-01-06 18:23:22,829 DEBUG   HandlerThread:8832 [system_info.py:probe():244] Probing system done
+2024-01-06 18:23:22,829 DEBUG   HandlerThread:8832 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.11.6', 'heartbeatAt': '2024-01-06T11:23:22.739276', 'startedAt': '2024-01-06T11:23:18.421555', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'd:\\Python\\PyTorch\\computer_vision\\Pizza_sushi_steak.py', 'codePathLocal': '..\\computer_vision\\Pizza_sushi_steak.py', 'codePath': '..\\computer_vision\\Pizza_sushi_steak.py', 'git': {'remote': None, 'commit': '20e009f3fbd2f5974eb86dfa4b59e41958b6f2b8'}, 'email': 'audwineleazer@gmail.com', 'root': 'D:/Python/PyTorch/TorchText', 'host': 'DESKTOP-R4N5SSU', 'username': 'Lenovo', 'executable': 'C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 991.0, 'min': 0.0, 'max': 1190.0}, 'cpu_freq_per_core': [{'current': 991.0, 'min': 0.0, 'max': 1190.0}], 'disk': {'/': {'total': 931.4960899353027, 'used': 109.43562698364258}}, 'gpu': 'NVIDIA GeForce MX330', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce MX330', 'memory_total': 2147483648}], 'memory': {'total': 11.800041198730469}}
+2024-01-06 18:23:22,829 INFO    HandlerThread:8832 [system_monitor.py:probe():224] Finished collecting system info
+2024-01-06 18:23:22,829 INFO    HandlerThread:8832 [system_monitor.py:probe():227] Publishing system info
+2024-01-06 18:23:22,829 DEBUG   HandlerThread:8832 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-01-06 18:23:22,830 DEBUG   HandlerThread:8832 [system_info.py:_save_pip():68] Saving pip packages done
+2024-01-06 18:23:22,831 INFO    HandlerThread:8832 [system_monitor.py:probe():229] Finished publishing system info
+2024-01-06 18:23:22,840 DEBUG   SenderThread:8832 [sender.py:send():382] send: files
+2024-01-06 18:23:22,840 INFO    SenderThread:8832 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2024-01-06 18:23:22,847 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-06 18:23:22,847 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: stop_status
+2024-01-06 18:23:22,849 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-06 18:23:23,140 DEBUG   SenderThread:8832 [sender.py:send():382] send: telemetry
+2024-01-06 18:23:23,525 INFO    Thread-16 :8832 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\wandb-metadata.json
+2024-01-06 18:23:23,526 INFO    Thread-16 :8832 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\requirements.txt
+2024-01-06 18:23:24,142 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: status_report
+2024-01-06 18:23:24,626 INFO    wandb-upload_0:8832 [upload_job.py:push():131] Uploaded file C:\Users\Lenovo\AppData\Local\Temp\tmpyaeze_4qwandb\yjdx9z08-wandb-metadata.json
+2024-01-06 18:23:24,758 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:24,759 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:25,226 DEBUG   SenderThread:8832 [sender.py:send():382] send: telemetry
+2024-01-06 18:23:25,540 INFO    Thread-16 :8832 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\output.log
+2024-01-06 18:23:26,772 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:26,772 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:27,562 INFO    Thread-16 :8832 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\output.log
+2024-01-06 18:23:28,788 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:28,788 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:29,585 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: status_report
+2024-01-06 18:23:30,572 INFO    Thread-16 :8832 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\output.log
+2024-01-06 18:23:30,804 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:30,804 ERROR   gpu       :8832 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-01-06 18:23:32,040 DEBUG   SenderThread:8832 [sender.py:send():382] send: exit
+2024-01-06 18:23:32,040 INFO    SenderThread:8832 [sender.py:send_exit():589] handling exit code: 255
+2024-01-06 18:23:32,040 INFO    SenderThread:8832 [sender.py:send_exit():591] handling runtime: 9
+2024-01-06 18:23:32,042 INFO    SenderThread:8832 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-01-06 18:23:32,144 INFO    SenderThread:8832 [sender.py:send_exit():597] send defer
+2024-01-06 18:23:32,144 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:32,144 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 0
+2024-01-06 18:23:32,145 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:32,145 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-01-06 18:23:32,145 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 1
+2024-01-06 18:23:32,145 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:32,146 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 1
+2024-01-06 18:23:32,147 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:32,147 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-01-06 18:23:32,147 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 2
+2024-01-06 18:23:32,148 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:32,148 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 2
+2024-01-06 18:23:32,148 INFO    HandlerThread:8832 [system_monitor.py:finish():203] Stopping system monitor
+2024-01-06 18:23:32,148 DEBUG   SystemMonitor:8832 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-06 18:23:32,148 DEBUG   SystemMonitor:8832 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-06 18:23:32,148 DEBUG   SystemMonitor:8832 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-06 18:23:32,149 INFO    HandlerThread:8832 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-06 18:23:32,150 INFO    HandlerThread:8832 [interfaces.py:finish():202] Joined disk monitor
+2024-01-06 18:23:32,187 ERROR   gpu       :8832 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-01-06 18:23:32,187 INFO    HandlerThread:8832 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-06 18:23:32,187 INFO    HandlerThread:8832 [interfaces.py:finish():202] Joined memory monitor
+2024-01-06 18:23:32,187 INFO    HandlerThread:8832 [interfaces.py:finish():202] Joined network monitor
+2024-01-06 18:23:32,188 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:32,188 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-01-06 18:23:32,188 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 3
+2024-01-06 18:23:32,188 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:32,188 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 3
+2024-01-06 18:23:32,188 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:32,188 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-01-06 18:23:32,188 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 4
+2024-01-06 18:23:32,189 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:32,189 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 4
+2024-01-06 18:23:32,189 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:32,189 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-01-06 18:23:32,189 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 5
+2024-01-06 18:23:32,189 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:32,189 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 5
+2024-01-06 18:23:32,190 DEBUG   SenderThread:8832 [sender.py:send():382] send: summary
+2024-01-06 18:23:32,190 INFO    SenderThread:8832 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-01-06 18:23:32,190 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:32,190 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-01-06 18:23:32,190 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 6
+2024-01-06 18:23:32,191 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:32,191 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 6
+2024-01-06 18:23:32,191 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:32,191 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-01-06 18:23:32,194 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: status_report
+2024-01-06 18:23:32,511 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 7
+2024-01-06 18:23:32,511 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:32,511 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 7
+2024-01-06 18:23:32,511 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:32,511 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-01-06 18:23:32,588 INFO    Thread-16 :8832 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\config.yaml
+2024-01-06 18:23:32,589 INFO    Thread-16 :8832 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\wandb-summary.json
+2024-01-06 18:23:33,041 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-06 18:23:33,577 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 8
+2024-01-06 18:23:33,577 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: poll_exit
+2024-01-06 18:23:33,577 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:33,578 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 8
+2024-01-06 18:23:33,579 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:33,579 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-01-06 18:23:33,579 INFO    SenderThread:8832 [job_builder.py:build():298] Attempting to build job artifact
+2024-01-06 18:23:33,580 INFO    SenderThread:8832 [job_builder.py:_get_source_type():439] no source found
+2024-01-06 18:23:33,580 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 9
+2024-01-06 18:23:33,580 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:33,580 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 9
+2024-01-06 18:23:33,581 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:33,581 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-01-06 18:23:33,581 INFO    SenderThread:8832 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-01-06 18:23:33,603 INFO    SenderThread:8832 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\output.log
+2024-01-06 18:23:33,604 INFO    SenderThread:8832 [dir_watcher.py:finish():388] scan: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files
+2024-01-06 18:23:33,605 INFO    SenderThread:8832 [dir_watcher.py:finish():402] scan save: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\config.yaml config.yaml
+2024-01-06 18:23:33,607 INFO    SenderThread:8832 [dir_watcher.py:finish():402] scan save: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\output.log output.log
+2024-01-06 18:23:33,613 INFO    SenderThread:8832 [dir_watcher.py:finish():402] scan save: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\requirements.txt requirements.txt
+2024-01-06 18:23:33,614 INFO    SenderThread:8832 [dir_watcher.py:finish():402] scan save: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\wandb-metadata.json wandb-metadata.json
+2024-01-06 18:23:33,614 INFO    SenderThread:8832 [dir_watcher.py:finish():402] scan save: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\wandb-summary.json wandb-summary.json
+2024-01-06 18:23:33,623 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 10
+2024-01-06 18:23:33,625 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:33,626 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 10
+2024-01-06 18:23:33,631 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:33,631 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-01-06 18:23:33,631 INFO    SenderThread:8832 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-06 18:23:34,042 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-06 18:23:34,042 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: poll_exit
+2024-01-06 18:23:34,196 INFO    wandb-upload_0:8832 [upload_job.py:push():131] Uploaded file D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\config.yaml
+2024-01-06 18:23:34,745 INFO    wandb-upload_2:8832 [upload_job.py:push():131] Uploaded file D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\requirements.txt
+2024-01-06 18:23:34,775 INFO    wandb-upload_1:8832 [upload_job.py:push():131] Uploaded file D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\output.log
+2024-01-06 18:23:35,054 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-06 18:23:35,054 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: poll_exit
+2024-01-06 18:23:35,193 INFO    wandb-upload_3:8832 [upload_job.py:push():131] Uploaded file D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\files\wandb-summary.json
+2024-01-06 18:23:35,410 INFO    Thread-15 (_thread_body):8832 [sender.py:transition_state():617] send defer: 11
+2024-01-06 18:23:35,411 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:35,411 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 11
+2024-01-06 18:23:35,411 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:35,412 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-01-06 18:23:35,412 INFO    SenderThread:8832 [file_pusher.py:join():181] waiting for file pusher
+2024-01-06 18:23:35,412 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 12
+2024-01-06 18:23:35,412 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:35,412 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 12
+2024-01-06 18:23:35,413 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:35,413 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-01-06 18:23:35,413 INFO    SenderThread:8832 [file_stream.py:finish():595] file stream finish called
+2024-01-06 18:23:35,679 INFO    SenderThread:8832 [file_stream.py:finish():599] file stream finish is done
+2024-01-06 18:23:35,680 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 13
+2024-01-06 18:23:35,680 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:35,680 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 13
+2024-01-06 18:23:35,681 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:35,681 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-01-06 18:23:35,681 INFO    SenderThread:8832 [sender.py:transition_state():617] send defer: 14
+2024-01-06 18:23:35,682 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: defer
+2024-01-06 18:23:35,682 INFO    HandlerThread:8832 [handler.py:handle_request_defer():172] handle defer: 14
+2024-01-06 18:23:35,683 DEBUG   SenderThread:8832 [sender.py:send():382] send: final
+2024-01-06 18:23:35,683 DEBUG   SenderThread:8832 [sender.py:send():382] send: footer
+2024-01-06 18:23:35,683 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: defer
+2024-01-06 18:23:35,683 INFO    SenderThread:8832 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-01-06 18:23:35,684 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-06 18:23:35,685 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-06 18:23:35,686 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: server_info
+2024-01-06 18:23:35,686 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: get_summary
+2024-01-06 18:23:35,686 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: sampled_history
+2024-01-06 18:23:35,686 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-06 18:23:35,688 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: job_info
+2024-01-06 18:23:35,688 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: poll_exit
+2024-01-06 18:23:35,689 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: poll_exit
+2024-01-06 18:23:35,689 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: server_info
+2024-01-06 18:23:35,943 DEBUG   SenderThread:8832 [sender.py:send_request():409] send_request: job_info
+2024-01-06 18:23:35,944 INFO    MainThread:8832 [wandb_run.py:_footer_history_summary_info():3837] rendering history
+2024-01-06 18:23:35,944 INFO    MainThread:8832 [wandb_run.py:_footer_history_summary_info():3869] rendering summary
+2024-01-06 18:23:35,944 INFO    MainThread:8832 [wandb_run.py:_footer_sync_info():3796] logging synced files
+2024-01-06 18:23:35,947 DEBUG   HandlerThread:8832 [handler.py:handle_request():146] handle_request: shutdown
+2024-01-06 18:23:35,947 INFO    HandlerThread:8832 [handler.py:finish():866] shutting down handler
+2024-01-06 18:23:36,706 INFO    WriterThread:8832 [datastore.py:close():294] close: D:\Python\PyTorch\TorchText\wandb\run-20240106_182318-q1aj90eh\run-q1aj90eh.wandb
+2024-01-06 18:23:36,956 INFO    SenderThread:8832 [sender.py:finish():1548] shutting down sender
+2024-01-06 18:23:36,956 INFO    SenderThread:8832 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-06 18:23:36,956 INFO    SenderThread:8832 [file_pusher.py:join():181] waiting for file pusher

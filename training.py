@@ -6,6 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 import Helper
 import nltk
 import tqdm
+import time 
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -26,10 +27,10 @@ for intent in intents['intents']:
     tags.append(tag)
     for pattern in intent['patterns']:
         w = Helper.Tokenizer(pattern)
-        xy.append((w,tag))
         # Filter out punctuation character elements ans stemming the word
         w = [Stemmer.stem(x) for x in w if x not in punctuation_pattern]
         all_words.extend(w)
+        xy.append((w,tag))
      
 # Sort and remove duplicate words
 all_words = sorted(set(all_words))
@@ -43,6 +44,11 @@ for sentence , tag in xy:
     
 x_train , y_train = np.array(x_train) , np.array(y_train)
 
+#Setup hyper parameter 
+BATCH_SIZE = 8
+LR = 0.991
+EPOCH = 2000
+
 class TextDataset(Dataset): 
     def __init__(self,BoW,label):
         self.bag = BoW 
@@ -53,7 +59,7 @@ class TextDataset(Dataset):
         return self.bag[idx] , self.label[idx]
         
 Train_Dataset = TextDataset(x_train,y_train)
-Train_loader = DataLoader(Train_Dataset,batch_size=12,shuffle = True)
+Train_loader = DataLoader(Train_Dataset,batch_size=BATCH_SIZE,shuffle = True)
 
 torch.manual_seed(42)
 torch.cuda.manual_seed_all(42)
@@ -65,23 +71,23 @@ class NeuralNet(nn.Module):
             nn.ReLU(),
             nn.Linear(hidden_size,hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size,num_classes)
+            nn.Linear(hidden_size,num_classes),
         )
     def forward(self,x):
         return self.layer(x)
 
 model = NeuralNet(input_size=len(x_train[0]) , hidden_size=8 , num_classes=len(tags)).to(device)
-optimizer = torch.optim.Adam(model.parameters(),lr=0.001)
+optimizer = torch.optim.Adam(model.parameters(),lr=LR)
 loss_fn = nn.CrossEntropyLoss()
 
-for epoch in tqdm.tqdm(range(2000)):
-    for sentence , label in Train_loader:
+for epoch in tqdm.tqdm(range(EPOCH)):
+    for (sentence , label) in Train_loader:
         #forward pass 
         raw_pred = model(sentence.to(device=device,dtype=torch.float32))
         #calculate the loss
-        loss = loss_fn(raw_pred,label.to(device=device,dtype=torch.int64))
+        loss = loss_fn(raw_pred,label.to(device=device,dtype=torch.long))
         y_pred=torch.softmax(raw_pred,dim=1).argmax(dim=1)
-        accuracy = Helper.accuracy_fn(y_pred=y_pred,y_true=label.to(device))
+        accuracy = Helper.accuracy_fn(y_pred=y_pred,y_true=label.to(device,dtype=torch.long))
         #backward pass
         optimizer.zero_grad()
         loss.backward()
@@ -89,4 +95,4 @@ for epoch in tqdm.tqdm(range(2000)):
         optimizer.step()
     if epoch % 100 == 0:
         print(f"Epoch {epoch+1} \nloss {loss.item()} \naccuracy {accuracy}")
-torch.save(model.state_dict(),"Text.pth")
+torch.save(model.state_dict(),"TextTest.pth")
