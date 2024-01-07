@@ -5,15 +5,26 @@ import json
 import random 
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-with open('intents.json','r') as f:
+with open('Dataset.json','r') as f:
     intents = json.load(f)
 tags = [intent['tag'] for intent in intents['intents']]
 
-all_words = ["'", 'a', 'accept', 'anyon', 'are', 'bye', 'can', 'card', 'cash', 'credit', 'day', 'deliveri', 
-             'do', 'doe', 'funni', 'get', 'good', 'goodby', 'have', 'hello', 'help', 'hey', 'hi', 'how', 'i', 
-             'is', 'item', 'joke', 'kind', 'know', 'later', 'long', 'lot', 'mastercard', 'me', 'my', 'of', 
-             'onli', 'pay', 'paypal', 's', 'see', 'sell', 'ship', 'someth', 'take', 'tell', 'thank', 'that', 
-             'there', 'what', 'when', 'which', 'with', 'you']
+"""For the intents"""
+# all_words = ["'", 'a', 'accept', 'anyon', 'are', 'bye', 'can', 'card', 'cash', 'credit', 'day', 'deliveri', 
+#              'do', 'doe', 'funni', 'get', 'good', 'goodby', 'have', 'hello', 'help', 'hey', 'hi', 'how', 'i', 
+#              'is', 'item', 'joke', 'kind', 'know', 'later', 'long', 'lot', 'mastercard', 'me', 'my', 'of', 
+#              'onli', 'pay', 'paypal', 's', 'see', 'sell', 'ship', 'someth', 'take', 'tell', 'thank', 'that', 
+#              'there', 'what', 'when', 'which', 'with', 'you']
+
+"""For the dataset"""
+all_words = ["'", 'a', 'about', 'afternoon', 'age', 'anim', 'appreci', 'are', 'athlet', 'book', 'bye', 'creat', 
+             'creator', 'destin', 'develop', 'do', 'eel', 'farewel', 'favorit', 'food', 'forecast', 'genr', 'good',
+             'goodby', 'great', 'guy', 'have', 'health', 'healthi', 'hello', 'hey', 'hi', 'hobbi', 'how', 'is', 'it',
+             'know', 'later', 'latest', 'leisur', 'like', 'lot', 'made', 'me', 'morn', 'movi', 'music', 'news', 'nice',
+             'old', 'pet', 'prefer', 'read', 'recommend', 's', 'see', 'song', 'sport', 'stay', 'tech', 'technolog', 
+             'tell', 'thank', 'the', 'tip', 'to', 'travel', 'updat', 'vacat', 'weather', 'well', 'what', 'who', 'you', 
+             'your']
+
 class NeuralNet(nn.Module):
     def __init__(self,input_size,hidden_size,num_classes):
         super(NeuralNet,self).__init__()
@@ -27,8 +38,8 @@ class NeuralNet(nn.Module):
     def forward(self,x):
         return self.layer(x)
     
-model = NeuralNet(input_size=55,hidden_size=8,num_classes=7).to(device)
-model.load_state_dict(torch.load('Text.pth'))
+model = NeuralNet(input_size=len(all_words),hidden_size=8,num_classes=len(tags)).to(device)
+model.load_state_dict(torch.load('Text2nd.pth'))
 
 while True: 
     Input = input("Ask the chatbot: ")

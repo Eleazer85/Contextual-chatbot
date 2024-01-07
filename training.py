@@ -8,7 +8,7 @@ import tqdm
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-with open('intents.json', 'r') as f:
+with open('Dataset.json', 'r') as f:
     intents = json.load(f)
  
 all_words = []
@@ -40,6 +40,7 @@ for sentence , tag in xy:
     y_train.append(tags.index(tag))
     
 x_train , y_train = np.array(x_train) , np.array(y_train)
+
 #Setup hyper parameter 
 BATCH_SIZE = 8
 LR = 0.001

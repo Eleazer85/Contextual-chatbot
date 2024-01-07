@@ -74,6 +74,16 @@
         "tag": "hobbies",
         "patterns": ["What are your hobbies?", "Hobby recommendations", "Leisure"],
         "responses": ["I don't have hobbies, but I hear gardening can be relaxing!"]
+      },
+      {
+        "tag":"Creator", 
+        "patterns":["Who created you?","Who made you?","Who developed you?","Do you know who's you creator?"],
+        "responses":["Eel is the one who created me, he's great isn't he?"]
+      },
+      {
+        "tag":"About creator",
+        "patterns":["Is eel a nice guy?","Is eel a great guy?","Do you like your creator?"],
+        "responses":["Yes! He's the best."]
       }
     ]
   }
