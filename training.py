@@ -4,19 +4,16 @@ import torch.nn as nn
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
 import Helper
-import nltk
 import tqdm
-import time 
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-with open('Dataset.json', 'r') as f:
+with open('intents.json', 'r') as f:
     intents = json.load(f)
  
 all_words = []
 tags = []
 xy = []
-Stemmer = nltk.stem.PorterStemmer()
 
 # Define a regular expression pattern for punctuation
 punctuation_pattern = ["?","!",",","."]
@@ -28,7 +25,7 @@ for intent in intents['intents']:
     for pattern in intent['patterns']:
         w = Helper.Tokenizer(pattern)
         # Filter out punctuation character elements ans stemming the word
-        w = [Stemmer.stem(x) for x in w if x not in punctuation_pattern]
+        w = [Helper.Stemmer.stem(x) for x in w if x not in punctuation_pattern]
         all_words.extend(w)
         xy.append((w,tag))
      

@@ -18,7 +18,6 @@ def Stemmer_fn(word):
 
 def Bags_of_words(tokenized,all_word):
     bag = np.zeros(len(all_word))
-    tokenized = Stemmer_fn(tokenized)
     for idx,token in enumerate(tokenized):
         if token in all_word:
             index = all_word.index(token)
