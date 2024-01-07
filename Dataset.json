@@ -1,0 +1,80 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon"],
+        "responses": ["Hi there!", "Hello!", "Hey!", "Good morning!", "Good afternoon!"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Goodbye", "See you later", "Bye", "Farewell"],
+        "responses": ["Goodbye!", "See you later!", "Bye!", "Farewell!"]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "Thanks a lot", "Appreciate it"],
+        "responses": ["You're welcome!", "Anytime!", "No problem!", "Glad I could help!"]
+      },
+      {
+        "tag": "age",
+        "patterns": ["How old are you?", "What's your age?", "Age"],
+        "responses": ["I'm just a computer program, I don't have an age!"]
+      },
+      {
+        "tag": "weather",
+        "patterns": ["What's the weather like?", "Tell me about the weather", "Weather forecast"],
+        "responses": ["I'm sorry, I don't have real-time weather information."]
+      },
+      {
+        "tag": "food",
+        "patterns": ["What's your favorite food?", "Tell me about your food preferences", "Food"],
+        "responses": ["I don't eat, but I've heard pizza is popular among humans!"]
+      },
+      {
+        "tag": "technology",
+        "patterns": ["Tell me about the latest technology", "Technology news", "Tech"],
+        "responses": ["I'm not updated on current events, but technology is fascinating!"]
+      },
+      {
+        "tag": "movies",
+        "patterns": ["What's your favorite movie?", "Movie recommendations", "Movies"],
+        "responses": ["I don't watch movies, but I've heard 'The Matrix' is a classic!"]
+      },
+      {
+        "tag": "health",
+        "patterns": ["How to stay healthy?", "Health tips", "Wellness"],
+        "responses": ["Maintaining a balanced diet and regular exercise are key to good health."]
+      },
+      {
+        "tag": "music",
+        "patterns": ["What's your favorite music genre?", "Music recommendations", "Songs"],
+        "responses": ["I don't have ears, but I've heard classical music is soothing!"]
+      },
+      {
+        "tag": "sports",
+        "patterns": ["Favorite sport?", "Sports updates", "Athletics"],
+        "responses": ["I don't play sports, but I've heard soccer is globally loved!"]
+      },
+      {
+        "tag": "pets",
+        "patterns": ["Do you have pets?", "Tell me about pets", "Animals"],
+        "responses": ["No, I don't have pets, but I hear dogs make great companions!"]
+      },
+      {
+        "tag": "books",
+        "patterns": ["Favorite book?", "Book recommendations", "Reading"],
+        "responses": ["I don't read books, but '1984' is often praised!"]
+      },
+      {
+        "tag": "travel",
+        "patterns": ["Favorite travel destination?", "Travel tips", "Vacations"],
+        "responses": ["I don't travel, but people seem to enjoy beaches for vacations!"]
+      },
+      {
+        "tag": "hobbies",
+        "patterns": ["What are your hobbies?", "Hobby recommendations", "Leisure"],
+        "responses": ["I don't have hobbies, but I hear gardening can be relaxing!"]
+      }
+    ]
+  }
+  

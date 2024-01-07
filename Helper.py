@@ -21,7 +21,8 @@ def Bags_of_words(tokenized,all_word):
     tokenized = Stemmer_fn(tokenized)
     for idx,token in enumerate(tokenized):
         if token in all_word:
-            bag[idx] = 1
+            index = all_word.index(token)
+            bag[index] = 1
     return bag
 
 # Calculate accuracy (a classification metric)

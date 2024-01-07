@@ -10,8 +10,8 @@ import time
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-with open('intents.json', 'r') as f:
- intents = json.load(f)
+with open('Dataset.json', 'r') as f:
+    intents = json.load(f)
  
 all_words = []
 tags = []
@@ -43,10 +43,10 @@ for sentence , tag in xy:
     y_train.append(tags.index(tag))
     
 x_train , y_train = np.array(x_train) , np.array(y_train)
-
 #Setup hyper parameter 
 BATCH_SIZE = 8
-LR = 0.991
+LR = 0.001
+HIDDEN_LAYER = 8
 EPOCH = 2000
 
 class TextDataset(Dataset): 
@@ -71,12 +71,12 @@ class NeuralNet(nn.Module):
             nn.ReLU(),
             nn.Linear(hidden_size,hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size,num_classes),
+            nn.Linear(hidden_size,num_classes)
         )
     def forward(self,x):
         return self.layer(x)
 
-model = NeuralNet(input_size=len(x_train[0]) , hidden_size=8 , num_classes=len(tags)).to(device)
+model = NeuralNet(input_size=len(x_train[0]) , hidden_size=HIDDEN_LAYER , num_classes=len(tags)).to(device)
 optimizer = torch.optim.Adam(model.parameters(),lr=LR)
 loss_fn = nn.CrossEntropyLoss()
 
@@ -95,4 +95,4 @@ for epoch in tqdm.tqdm(range(EPOCH)):
         optimizer.step()
     if epoch % 100 == 0:
         print(f"Epoch {epoch+1} \nloss {loss.item()} \naccuracy {accuracy}")
-torch.save(model.state_dict(),"TextTest.pth")
+torch.save(model.state_dict(),"Text2nd.pth")
