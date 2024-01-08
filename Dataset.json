@@ -3,7 +3,7 @@
       {
         "tag": "greeting",
         "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon"],
-        "responses": ["Hi there!", "Hello!", "Hey!", "Good morning!", "Good afternoon!"]
+        "responses": ["Hi there!", "Hello!", "Hey!"]
       },
       {
         "tag": "goodbye",
