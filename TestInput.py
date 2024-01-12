@@ -5,7 +5,13 @@ import json
 import random 
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-with open('Dataset.json','r') as f:
+
+DATASET_PATH = 'Dataset/Dataset.json'
+"""
+If you choose Dataset.json use Model.pth
+If you choose intents.json use Intents.pth
+"""
+with open(DATASET_PATH,'r') as f:
     intents = json.load(f)
     
 # Define a regular expression pattern for punctuation

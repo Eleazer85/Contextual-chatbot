@@ -92,7 +92,7 @@
     },
     { 
       "tag": "insomnia",
-      "patterns": ["Can't sleep", "Insomnia help", "Sleep tips","Why can't I sleep sometimes?"],
+      "patterns": ["Can't sleep", "Insomnia help", "Sleep tips"],
       "responses": ["Try relaxing activities before bedtime, like reading or listening to calm music.", "Try counting some sheep while closing your eyes"]
     }
   ]

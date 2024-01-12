@@ -8,7 +8,9 @@ import tqdm
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-with open('Dataset.json', 'r') as f:
+#You can choose either Dataset.json or intents.json for the dataset
+DATASET_PATH = 'Dataset/Dataset.json'
+with open('Dataset/Dataset.json', 'r') as f:
     intents = json.load(f)
  
 all_words = []
