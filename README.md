@@ -23,7 +23,7 @@ model = NeuralNet(input_size=len(all_words),hidden_size=8,num_classes=len(tags))
 ```
 The length of the `input_size` and `num_classes` depends from the dataset. In my case the length of the input is 82 using Dataset.json as the dataset (I have 2 dataset, intents.json & Dataset.json) and my output length / `num_classes` is 19, which is also using Dataset.json .
 
-### Tutorial
+## Tutorial
 If you're wondering where do I learn this. I learned it from youtube using this tutorial by Patrick Loeber:
 * [Chat Bot With PyTorch - NLP And Deep Learning - Python Tutorial Part 1](https://www.youtube.com/watch?v=RpWeNzfSUHw&ab)
 * [Chat Bot With PyTorch - NLP And Deep Learning - Python Tutorial Part 2](https://www.youtube.com/watch?v=8qwowmiXANQ)
