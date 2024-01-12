@@ -7,23 +7,21 @@ import random
 device = "cuda" if torch.cuda.is_available() else "cpu"
 with open('Dataset.json','r') as f:
     intents = json.load(f)
-tags = [intent['tag'] for intent in intents['intents']]
+    
+# Define a regular expression pattern for punctuation
+punctuation_pattern = ["?","!",",","."]
 
-"""For the intents"""
-# all_words = ["'", 'a', 'accept', 'anyon', 'are', 'bye', 'can', 'card', 'cash', 'credit', 'day', 'deliveri', 
-#              'do', 'doe', 'funni', 'get', 'good', 'goodby', 'have', 'hello', 'help', 'hey', 'hi', 'how', 'i', 
-#              'is', 'item', 'joke', 'kind', 'know', 'later', 'long', 'lot', 'mastercard', 'me', 'my', 'of', 
-#              'onli', 'pay', 'paypal', 's', 'see', 'sell', 'ship', 'someth', 'take', 'tell', 'thank', 'that', 
-#              'there', 'what', 'when', 'which', 'with', 'you']
+tags = []
+all_words = []
+for intent in intents['intents']:
+    tags.append(intent['tag'])
+    for pattern in intent['patterns']:
+        w = Helper.Tokenizer(pattern)
+        # Filter out punctuation character elements ans stemming the word
+        w = [Helper.Stemmer.stem(x) for x in w if x not in punctuation_pattern]
+        all_words.extend(w)  # Extend the list with processed words
 
-"""For the dataset"""
-all_words = ["'", 'a', 'about', 'afternoon', 'age', 'anim', 'appreci', 'are', 'athlet', 'book', 'bye', 'creat', 
-             'creator', 'destin', 'develop', 'do', 'eel', 'farewel', 'favorit', 'food', 'forecast', 'genr', 'good',
-             'goodby', 'great', 'guy', 'have', 'health', 'healthi', 'hello', 'hey', 'hi', 'hobbi', 'how', 'is', 'it',
-             'know', 'later', 'latest', 'leisur', 'like', 'lot', 'made', 'me', 'morn', 'movi', 'music', 'news', 'nice',
-             'old', 'pet', 'prefer', 'read', 'recommend', 's', 'see', 'song', 'sport', 'stay', 'tech', 'technolog', 
-             'tell', 'thank', 'the', 'tip', 'to', 'travel', 'updat', 'vacat', 'weather', 'well', 'what', 'who', 'you', 
-             'your']
+all_words = sorted(list(set(all_words)))
 
 class NeuralNet(nn.Module):
     def __init__(self,input_size,hidden_size,num_classes):
