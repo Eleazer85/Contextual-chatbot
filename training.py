@@ -76,8 +76,6 @@ class NeuralNet(nn.Module):
     def forward(self,x):
         return self.layer(x)
 
-print(all_words)
-exit()
 model = NeuralNet(input_size=len(x_train[0]) , hidden_size=HIDDEN_LAYER , num_classes=len(tags)).to(device)
 optimizer = torch.optim.Adam(model.parameters(),lr=LR)
 loss_fn = nn.CrossEntropyLoss()
